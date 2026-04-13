@@ -32,10 +32,9 @@ export default function ContactPage() {
   ];
 
   const socialLinks = [
-    { name: 'Instagram', href: 'https://instagram.com/ndlrecords', handle: '@ndlrecords' },
-    { name: 'Twitter', href: 'https://twitter.com/ndlrecords', handle: '@ndlrecords' },
-    { name: 'Spotify', href: 'https://spotify.com/ndlrecords', handle: 'NDL Records' },
-    { name: 'YouTube', href: 'https://youtube.com/ndlrecords', handle: 'NDL Records' },
+    { name: 'Instagram', href: 'https://www.instagram.com/nomadic_dream_life/', handle: '@ndlrecords' },
+    { name: 'Spotify', href: 'https://open.spotify.com/artist/6T4u6bZDlwUfEU2bSCC86g', handle: 'NDL Records' },
+    { name: 'YouTube', href: 'https://www.youtube.com/channel/UCxuCtjBIxLoKC08t9YqcVLQ', handle: 'NDL Records' },
   ];
 
   return (

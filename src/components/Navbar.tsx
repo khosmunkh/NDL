@@ -25,9 +25,9 @@ export default function Navbar() {
   ];
 
   const socialLinks = [
-    { href: "https://instagram.com", label: "Instagram" },
-    { href: "https://twitter.com", label: "Twitter" },
-    { href: "https://spotify.com", label: "Spotify" },
+    { href: "https://www.instagram.com/nomadic_dream_life/", label: "Instagram" },
+    { href: "https://open.spotify.com/artist/6T4u6bZDlwUfEU2bSCC86g", label: "Spotify" },
+    { href: "https://www.youtube.com/channel/UCxuCtjBIxLoKC08t9YqcVLQ", label: "YouTube" },
   ];
 
   return (

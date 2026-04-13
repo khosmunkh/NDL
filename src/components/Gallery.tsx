@@ -2,11 +2,14 @@
 import { motion } from 'framer-motion';
 
 const images = [
-  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745",
-  "https://images.unsplash.com/photo-1493225255756-d9584f8606e9",
-  "https://images.unsplash.com/photo-1514525253361-bee8a4874093",
-  "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
-  "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad",
+  "/images/merch/merch-1.jpg",
+  "/images/merch/merch-2.jpg",
+  "/images/merch/merch-3.jpg",
+  "/images/merch/merch-4.jpg",
+  "/images/merch/merch-5.jpg",
+  "/images/merch/merch-6.jpg",
+  "/images/merch/merch-7.jpg",
+  "/images/merch/merch-8.jpg",
 ];
 
 export default function Gallery() {

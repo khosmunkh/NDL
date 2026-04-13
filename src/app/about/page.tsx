@@ -46,7 +46,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2000"
+            src="/images/ndl-about.jpg"
             alt="Studio"
             className="w-full h-full object-cover opacity-30"
           />
@@ -115,7 +115,7 @@ export default function AboutPage() {
       {/* Image Break */}
       <section className="relative h-[50vh] md:h-[70vh]">
         <img
-          src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2000"
+          src="/images/ndl-about-2.jpg"
           alt="NDL Studio Session"
           className="w-full h-full object-cover"
         />
@@ -171,7 +171,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-square">
               <img
-                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1000"
+                src="/images/ndl-about-3.jpg"
                 alt="NDL Team"
                 className="w-full h-full object-cover"
               />

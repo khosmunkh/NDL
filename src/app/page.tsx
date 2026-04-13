@@ -18,7 +18,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2000"
+            src="/images/NDL-1.jpg"
             alt="NDL Records"
             className="w-full h-full object-cover opacity-40"
           />
@@ -138,9 +138,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-16">
             <div>
-              <p className="text-xs text-muted tracking-[0.3em] uppercase mb-3">Visual Identity</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter">
-                Visuals
+                Merch
               </h2>
             </div>
           </div>

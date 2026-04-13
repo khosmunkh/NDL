@@ -95,7 +95,7 @@ export default function AlbumsPage() {
             Follow us on Spotify to stay updated with our latest releases and exclusive content.
           </p>
           <a
-            href="https://spotify.com"
+            href="https://open.spotify.com/artist/6T4u6bZDlwUfEU2bSCC86g"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#1DB954] text-black px-8 py-4 text-sm font-medium tracking-wide hover:bg-[#1ed760] transition-colors duration-300"
