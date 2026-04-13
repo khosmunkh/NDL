@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Play } from 'lucide-react';
 import { NDL_DATA } from '@/data/mockData';
 
 export default function AlbumMarquee() {
@@ -8,25 +10,31 @@ export default function AlbumMarquee() {
   const albums = [...NDL_DATA.albums, ...NDL_DATA.albums];
 
   return (
-    <section className="py-20 bg-zinc-950 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold uppercase italic tracking-tight">
-          Discography
-        </h2>
-        <p className="text-zinc-500 text-sm mt-2 uppercase tracking-widest">
-          10+ Albums and Growing
-        </p>
+    <section className="py-24 md:py-32 bg-card overflow-hidden border-y border-border">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+        <div>
+          <p className="text-xs text-muted tracking-[0.3em] uppercase mb-3">Latest Releases</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tighter">
+            Discography
+          </h2>
+        </div>
+        <Link 
+          href="/albums"
+          className="text-sm text-muted hover:text-foreground transition-colors underline underline-offset-4"
+        >
+          View all albums
+        </Link>
       </div>
 
       {/* Marquee Container */}
       <div className="relative">
         {/* Gradient Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-zinc-950 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-zinc-950 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-card to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-card to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling Track */}
         <motion.div
-          className="flex gap-6"
+          className="flex gap-6 md:gap-8"
           animate={{
             x: [0, -50 * NDL_DATA.albums.length * 16],
           }}
@@ -34,7 +42,7 @@ export default function AlbumMarquee() {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 40,
+              duration: 50,
               ease: "linear",
             },
           }}
@@ -42,24 +50,22 @@ export default function AlbumMarquee() {
           {albums.map((album, index) => (
             <div
               key={`${album.id}-${index}`}
-              className="flex-shrink-0 w-48 md:w-56 group cursor-pointer"
+              className="flex-shrink-0 w-44 md:w-56 group cursor-pointer"
             >
-              <div className="relative aspect-square mb-3 overflow-hidden rounded-md">
+              <div className="relative aspect-square mb-4 overflow-hidden bg-background">
                 <img
                   src={album.cover}
-                  className="object-cover w-full h-full group-hover:scale-110 transition duration-500"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
                   alt={album.title}
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-                  <div className="bg-white text-black p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                      <path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" />
-                    </svg>
+                <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                  <div className="bg-foreground text-background p-4 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <Play className="w-5 h-5" fill="currentColor" />
                   </div>
                 </div>
               </div>
-              <h4 className="font-bold text-sm truncate uppercase">{album.title}</h4>
-              <p className="text-xs text-zinc-500">{album.artist} • {album.year}</p>
+              <h4 className="font-bold text-sm truncate group-hover:text-muted transition-colors">{album.title}</h4>
+              <p className="text-xs text-muted">{album.artist} • {album.year}</p>
             </div>
           ))}
         </motion.div>
