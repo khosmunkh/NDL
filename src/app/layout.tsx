@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PageAnimatePresence from "@/components/PageAnimatePresence";
+import SmoothScroll from "@/components/SmoothScroll";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,15 +30,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="bg-black text-white min-h-full flex flex-col">
-        {/* Бүх хуудас дээр харагдах Navbar */}
-        <Navbar />
-        
-        {/* Хуудас хоорондын шилжилтийн эффект */}
-        <PageAnimatePresence>
-          <main className="flex-grow">
-            {children}
-          </main>
-        </PageAnimatePresence>
+        <SmoothScroll>
+          {/* Бүх хуудас дээр харагдах Navbar */}
+          <Navbar />
+          
+          {/* Хуудас хоорондын шилжилтийн эффект */}
+          <PageAnimatePresence>
+            <main className="flex-grow">
+              {children}
+            </main>
+          </PageAnimatePresence>
+        </SmoothScroll>
       </body>
     </html>
   );
